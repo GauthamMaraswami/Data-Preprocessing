@@ -74,12 +74,6 @@ def fillByLinearRegression(array,x,y):
     array[y].fillna(value=test,inplace=True)
     return array
 
-
-
-
-
-
-
 def operate(choice,dataset,col_list):
     if choice=='d':
         dataset.dropna(inplace=True)
@@ -121,7 +115,7 @@ while(ch=='y'):
     print('enter the column numbers of collumns where missing values are present')
     str_arr = raw_input().split(' ') 
     col_list = [int(num) for num in str_arr]
-    print('enter what to do with the rows with missing values drop(d) replace with mean(me) replace with mode(mo) replace with median(md) replace with constant c')
+    print('enter what to do with the rows with missing values drop(d) replace with mean(me) replace with mode(mo) replace with median(md) replace with constant (c) linear regression(lr) class wise mean (g)')
     choice=raw_input()
     try:
         dataset=replace(dataset,col_list,choice)
